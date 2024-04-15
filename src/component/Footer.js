@@ -1,22 +1,26 @@
 import React from "react";
 
-const nav = () =>{
+const Footer = () => {
     const data = [
         {
-            icon: "fas fa-fire=alt",
+            icon: "fas fa-fire-alt",
             name: "Trending",
+            link: "/",
         },
         {
             icon: "fas fa-film",
             name: "Movies",
+            link: "/movies",
         },
         {
             icon: "fas fa-tv",
             name: "Tv Series",
+            link: "/tv",
         },
         {
             icon: "fas fa-search",
             name: "Search",
+            link: "/search",
         },
     ];
     return (
@@ -24,13 +28,13 @@ const nav = () =>{
         <div className="container-fluid">
             <div className="row">
                 <div className="col-12 text-center bg-dark footer">
-                    {data.map((Val) => {
+                    {data.map((val) => {
                         return (
                             <>
                             <button className="col-sm-2 col-md-2 btn btn-dark">
                                 <i className={`${Val.icon}`} id="fire"></i>
                                 <br />
-                                <h5 className="pt-1 fs-6">{Val.name}</h5>
+                                <h5 className="pt-1 fs-6">{Val.name}</h5> 
                             </button>
                             </>
                         );
@@ -40,5 +44,7 @@ const nav = () =>{
         </div>
         </>
     );
-}
-export default nav;
+
+};
+
+export default Footer;
